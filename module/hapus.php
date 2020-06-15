@@ -19,7 +19,7 @@ if(isset($_GET['nama_donatur'])){
 		//jika data tidak ada, maka redirect atau dikembalikan ke halaman beranda
 		echo '<script>window.history.back()</script>';
 	
-	if{
+	if(mysqli_affected_rows($_GET['nama_donatur'])){
 		
 		//jika data ada di database, maka melakukan query DELETE table siswa dengan kondisi WHERE siswa_id='$id'
 		$del = mysqli_query($koneksi, "DELETE FROM donatur WHERE nama_donatur='$nama'")or die(mysqli_error());
